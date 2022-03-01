@@ -1,24 +1,79 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(num1, num2) {
 
+if (typeof(num1) === "number" > typeof(num2) === "number"){
+  return num1
+} else {
+  return num2
+}
+}
 
+console.log(maxOfTwoNumbers(10,40))
 
 // Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+const arr = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(arr) {
+  var lgth = 0;
+var longest;
+
+for (var i = 0; i < arr.length; i++) {
+  if (arr[i].length > lgth) {
+    var lgth = arr[i].length;
+    longest = arr[i];
+  }
+}
+console.log(longest)
+return longest;
+}
+
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
 
+  let total=0;
+    for(let [i] in numbers) { 
+        total += numbers[i];
+    }
+    return total;
+
+}
+
+console.log(sumNumbers(numbers))
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function sum(arr) {
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      result += arr[i];
+    }
+    else if (typeof arr[i] === "string") {
+      // Suma la longitud del string
+      result = arr[i].reduce(function(a,b) {
+        return arr.length;
+      });
+    }
+    else if (typeof arr[i] === "boolean") {
+      // Si es true suma 1, si es false no sumes nada
+    }
+    else {
+console.log("wtf")
+    }
+  }
+  
+}
+
+
+
 
 
 
@@ -26,7 +81,19 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers() {
+
+  let media = 0;
+  let suma = 0;
+
+  lista.forEach(numero => {
+    suma += numero;
+  });
+
+  media = suma / lista.length;
+  console.log(media)
+  
+}
 
 
 // Level 2: Array of strings
@@ -116,7 +183,7 @@ function greatestProduct() {}
 if (typeof module !== 'undefined') {
   module.exports = {
     maxOfTwoNumbers,
-    findLongestWord,
+   findLongestWord,
     sumNumbers,
     sum,
     averageNumbers,

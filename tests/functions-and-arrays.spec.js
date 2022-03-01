@@ -311,7 +311,7 @@ describe('Bonus Quest - greatestProduct', () => {
     expect(greatestProduct(matrix)).toBe(1);
   });
 
-  test('should return 16 when all the numbers of the arrays are 2', () => {
+ test('should return 16 when all the numbers of the arrays are 2', () => {
     let matrix = [
       [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
       [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
